@@ -1,0 +1,20 @@
+micronaut:
+  application:
+    name: jpa-demo
+  server:
+    port: 8080
+
+datasources:
+  default:
+    url: ${JDBC_URL:`jdbc:mysql://localhost:3306/micronautcrud`}
+    username: ${JDBC_USER:root}
+    password: ${JDBC_PASSWORD:Ganesh@1995}
+    driverClassName: com.mysql.cj.jdbc.Driver
+jpa:
+  default:
+    properties:
+      hibernate:
+        hbm2ddl:
+          auto: update
+        show_sql: true
+        dialect: org.hibernate.dialect.MySQL57Dialect
